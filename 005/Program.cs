@@ -1,15 +1,18 @@
-﻿// пишем первую функцию
-
-int Max(int arg1, int arg2, int arg3)
+﻿/*Задача 15:
+Напишите программу, которая принимает на вход цифру,
+обозначающую день недели, и проверяет, является ли этот день выходным.
+6 -> да
+7 -> да
+1 -> нет
+*/
+Console.WriteLine("Введите число от 1 до 7:");
+int numberA = Convert.ToInt32(Console.ReadLine());
+if ((numberA == 6) || (numberA == 7))
 {
-    int result = arg1;
-    if(arg2 > result) result = arg2;
-    if(arg3 > result) result = arg3;
-    return result;
+    System.Console.WriteLine("да");
 }
-int a1 = 8;
-int b1 = 15;
-int c1 = 18;
+else
+{
+    System.Console.WriteLine("нет");
+}  
 
-int max1 = Max(a1, b1, c1);
-Console.Write(max1);
