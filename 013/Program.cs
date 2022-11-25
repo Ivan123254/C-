@@ -5,14 +5,26 @@
 2, 4 -> 16 
 */
 
-    int numberA, numberB, numberC;
 
-    numberA = int.Parse(Console.ReadLine());
-    numberB = int.Parse(Console.ReadLine());
-    numberC = 1;
-    for (int i = 0; i < numberB; i++)
+    int numberA = read("Введите число A: ");
+    int numberB = read("Введите число B: ");
+    stepeny(numberA, numberB);
+
+
+void stepeny(int a, int b)
+{
+    int result = 1;
+    for (int i = 1; i <= b; i++)
     {
-        numberC = numberC * numberA;
+        result = result * a;
     }
-    Console.WriteLine(numberA + ", " + numberB + " -> " + numberC);
+    Console.WriteLine(numberA + ", " + numberB + " -> " + result);
+}
+
+
+int read(string message)
+{
+    Console.Write(message);
+    return Convert.ToInt32(Console.ReadLine());
+}
 
