@@ -7,12 +7,11 @@
 */
 
 int number = Read("Введите число: ");
-
-int numbeX = Number2(number);
-SumNumbers(number, numbeX);
+int ind = cikl(number);
+Sum(number, ind);
 
 // Функция подсчета цифр в числе
-int Number2(int a)
+int cikl(int a)
 {
     int index = 0;
     while (a > 0)
@@ -24,7 +23,7 @@ int Number2(int a)
 }
 
 // Функция вывода суммы цифр в числе
-void SumNumbers(int n, int leng)
+void Sum(int n, int leng)
 {
     int sum = 0;
     for (int i = 1; i <= leng; i++)
@@ -32,7 +31,7 @@ void SumNumbers(int n, int leng)
         sum += n % 10;
         n /= 10;
     }
-    Console.WriteLine($"сумма цифр {sum}");
+    Console.Write(number + " -> " + sum);
 }
 
 // Функция ввода
