@@ -6,25 +6,25 @@
 */
 
 
-    int numberA = read("Введите число A: ");
-    int numberB = read("Введите число B: ");
-    stepeny(numberA, numberB);
+// Функция ввода
+int ReadInt(string input)
+{
+    Console.Write(input);
+    return Convert.ToInt32(Console.ReadLine());
+}
 
-
-void stepeny(int a, int b)
+// Функция возведения в степень
+void Vstepeny(int a, int b)
 {
     int result = 1;
     for (int i = 1; i <= b; i++)
     {
         result = result * a;
     }
-    Console.WriteLine(numberA + ", " + numberB + " -> " + result);
+    Console.Write(a + ", " + b + " -> " + result);
 }
 
 
-int read(string message)
-{
-    Console.Write(message);
-    return Convert.ToInt32(Console.ReadLine());
-}
-
+int numb1 = ReadInt("Введите число: ");
+int numb2 = ReadInt("Введите степень: ");
+Vstepeny(numb1, numb2);
