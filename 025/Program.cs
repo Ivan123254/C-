@@ -1,49 +1,34 @@
-﻿/*Задача 47. Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
-
+﻿
+/*Задача 47. Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
 m = 3, n = 4.
-
 0,5 7 -2 -0,2
-
 1 -3,3 8 -9,9
-
 8 7,8 -7,1 9
 */
-int countM = Read("Введите размер массива M: ");
-int countN = Read("Введите размер массива N: ");
-double[,] arrNew = new double[countM,countN];
-printArray(arrNew);
-
-double[,] randArray(int countM,int countN)
+double[,] rndArray(int lengthRow, int lengthCol, int deviation)
 {
-    double[,] arrNew = new double[countM,countN];
-    Random random = new Random();
-    for (int i = 0; i < countM; i++)
+    double[,] array = new double[lengthRow, lengthCol];
+    for (int i = 0; i < lengthRow; i++)
     {
-        for (int j = 0; j < countN; j++)
+        for (int j = 0; j < lengthCol; j++)
         {
-            arrNew[i, j] = random.NextDouble() * 100 - 50;
-            
+            array[i, j] = new Random().Next(-deviation, deviation + 1);
         }
-       
     }
-    return arrNew;
+    return array;
 }
 
-void printArray(double[,] arrNew)
+void prArray(double[,] array)
 {
-     for (int i = 0; i < countM; i++)
+    Console.WriteLine();
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-        for (int j = 0; j < countN; j++)
+        for (int j = 0; j < array.GetLength(1); j++)
         {
-            Console.Write(arrNew[i,j]+"\t");    
-            
+            Console.Write(array[i, j] + "\t");
         }
         Console.WriteLine();
     }
 }
-
-int Read(string msg) 
-{
-    Console.Write(msg);
-    return Convert.ToInt32(Console.ReadLine());
-}
+double[,] array = rndArray(3, 4, 999);
+prArray(array);
