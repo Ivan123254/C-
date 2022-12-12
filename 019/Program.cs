@@ -55,4 +55,5 @@ printArray(multArray);
 int[] array1 = GenerateRandomArray(10,0,10);
 printArray(array1);
 int[] multArray1 = multElementsOfArray(array1);
-printArray(multArray1);
+ 
+ 

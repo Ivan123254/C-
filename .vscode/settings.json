@@ -1,3 +1,21 @@
 {
-    "cSpell.language": "en,ru"
+    "cSpell.language": "en,ru",
+    "editor.fontSize": 15,
+    "scm.inputFontSize": 15,
+    "debug.console.fontSize": 15,
+    "terminal.integrated.fontSize": 15,
+    "markdown.preview.fontSize": 15,
+    "editor.formatOnType": true,
+    "editor.suggestFontSize": 15,
+    "screencastMode.fontSize": 56,
+    "spellright.language": [
+        "en",
+        "ru"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext",
+        "csharp"
+    ]
 }
